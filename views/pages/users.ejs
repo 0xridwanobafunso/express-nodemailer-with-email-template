@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Users Pages</title>
+  </head>
+  <body>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores fugiat
+    cupiditate, labore minus placeat, perferendis maxime earum, vero quia eius
+    deserunt quod numquam eum aliquam eaque modi. Et, eum doloremque.
+
+    <ul>
+      <% users.forEach(user => { %>
+      <li>
+        <%= user.name %>
+      </li>
+      <% }) %>
+    </ul>
+
+    <div style="margin-top: 30;">
+      <form action="/api/v1/users" method="post">
+        <div>
+          <label for="">Username</label>
+          <input type="text" name="username" />
+        </div>
+        <div>
+          <label for="">Password</label>
+          <input type="password" name="password" />
+        </div>
+        <div>
+          <input type="submit" onclick="submitButton()" value="Send" />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      const submitButton = () => {
+        console.log('click')
+      }
+    </script>
+  </body>
+</html>
